@@ -1,0 +1,32 @@
+{% load static %}
+<img id="logo" src="{% static 'img\onlyflans.png' %}" alt="logo-onlyflans" />
+<img
+	id="img-flan"
+	src="{% static 'img\fondo_header.jpeg' %}"
+	alt="imagen de fondo" />
+
+<style>
+	#logo {
+		width: 60%;
+		height: auto;
+		object-fit: cover;
+		z-index: 2;
+		position: absolute;
+		background-size: contain; /* Asegura que el logo se ajuste dentro del espacio disponible */
+		background-repeat: no-repeat;
+		transform: translate(-50%, 10%);
+
+	}
+
+	#img-flan {
+		z-index: 1;
+		position: relative;
+		width: 100%;
+		display: flex;
+    	justify-content: center; /* Centra horizontalmente */
+    	align-items: center; /* Centra verticalmente */
+
+		
+	}
+
+</style>
