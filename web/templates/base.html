@@ -9,41 +9,49 @@
 			rel="stylesheet"
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous" />
+			{% load static %}
+			<link rel="icon" href="{% static 'img\icono-of.png' %}" type="image/x-icon">
+			
 	</head>
 	<body>
-		<div class="container">
+		<div class="container position-relative">
 			<div class="row">
-				<header class="col-12 text-center">{% include 'header.html' %}</header>
-
+				{% include 'header.html' %}
 				<nav class="col-12">{% include 'navbar.html' %}</nav>
 
-				<div id="contenido" class=" col-12">
-					<div>contenido</div>
+				<div id="contenido" class="col-12">
+					{%block content %}
+					{% block h1 %}
+					<h1>CONTENIDO</h1>
+					{% endblock %}
+					{% block image %}
+					{%endblock %}
+					{%endblock%}
 				</div>
 
-				<footer class="col-12">{% include 'footer.html' %}</footer>
+				{% include 'footer.html' %}
 			</div>
 		</div>
 
 		<style>
+			h1{
+				color: var(--celeste)
+			}
 			body {
 				background-color: darkslategray;
 				font-family: Verdana, Geneva, Tahoma, sans-serif;
-				color: white;
-				font-size: 20;
+				color: rgb(254, 245, 237);
+			
 			}
 
-			#contenido{
+			#contenido {
 				background-color: rgb(189, 196, 208);
-				font-size: 60px;
-				padding-block: 20px;
+				
 			}
 
-						
 			:root {
 				--celeste: rgb(2, 152, 202);
 			}
-
 		</style>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

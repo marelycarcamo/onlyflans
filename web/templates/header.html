@@ -1,32 +1,42 @@
 {% load static %}
+
 <img id="logo" src="{% static 'img\onlyflans.png' %}" alt="logo-onlyflans" />
-<img
-	id="img-flan"
-	src="{% static 'img\fondo_header.jpeg' %}"
-	alt="imagen de fondo" />
+
+<header>
+	<img
+		id="img-header"
+		src="{% static 'img\fondo-header.jpg' %}"
+		alt="fondo-imagen-flan" />
+</header>
 
 <style>
 	#logo {
-		width: 60%;
+		z-index: 1;
+		position: absolute;
+		width: 50%;
 		height: auto;
 		object-fit: cover;
-		z-index: 2;
-		position: absolute;
 		background-size: contain; /* Asegura que el logo se ajuste dentro del espacio disponible */
 		background-repeat: no-repeat;
-		transform: translate(-50%, 10%);
-
+		margin-top: 0%;
+		margin-left: 50%;
+		transform: translate(-50%, 25%);
+		position: absolute;
 	}
 
-	#img-flan {
-		z-index: 1;
-		position: relative;
+	header {
+		background-image: url("{% static 'img\fondo-header.jpg' %}");
+		background-repeat: no-repeat; /* Opcional: define cómo se repite la imagen */
+		background-position: center; /* Opcional: define la posición de la imagen */
+		background-size: cover; /* Opcional: define cómo se escala la imagen */
+		overflow: hidden;
+	}
+
+	#img-header{
+		filter: blur(2px);
 		width: 100%;
-		display: flex;
-    	justify-content: center; /* Centra horizontalmente */
-    	align-items: center; /* Centra verticalmente */
-
-		
+		height: auto;
 	}
 
+	
 </style>

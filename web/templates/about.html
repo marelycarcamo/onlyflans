@@ -1,21 +1,69 @@
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Onlyflans</title>
-	</head>
-	<body>
-		<h1>acerca</h1>
-		<style>
-			h1{
-                color: red;
-				margin-top: 50px;
-				text-align: center;
-				font-size: 60px;
-				font-family: Verdana, Geneva, Tahoma, sans-serif;
-            }
-		</style>
-	</body>
-</html>
-F
+{% extends 'base.html' %} {%block content %} {% block h1 %}
+<h1>acerca de nosotros</h1>
+{% endblock %}
+<div class="container-about row">
+<section id="about-section-1" class="col-12">
+	<div class="about-img-container" class="col-6 col-md-12">
+		{% load static %} {%block image %}
+		<img
+			id="img-local-onlyflans"
+			src="{% static 'img\local-onlyflans.png' %}"
+			alt="imagen-local-Onlyflans" />
+		{% endblock %}
+	</div>
+
+	<div id="about-text1" class="col-6 col-md-12">
+		<p>
+			En el corazón de Osorno, la familia Enoch se convirtió en sinónimo de
+			dulzura y tradición. Tras su llegada en 1845, durante la ola de
+			inmigración alemana, establecieron una pequeña empresa de postres de leche
+			que con el tiempo se transformaría en un emblema de la gastronomía local.
+			'Onlyflans', como se conocería más tarde, no solo endulzó la vida de los
+			osorninos, sino que también se expandió a otras ciudades, llevando consigo
+			la herencia y el sabor de sus fundadores. Con el paso de los años, la
+			empresa evolucionó, abriendo restaurantes y cafeterías, y recientemente
+			celebró su legado con la inauguración del Museo del Budín. Este lugar no
+			solo es un homenaje a su trayectoria de 150 años, sino también un punto de
+			encuentro para los amantes de la historia y la cultura culinaria,
+			atrayendo a visitantes de todo el mundo ansiosos por descubrir los
+			secretos de los famosos budines chilenos.
+		</p>
+	</div>
+</section>
+
+<section id="about-section2"></section>
+</div>
+<style>
+	#about-section-1 {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		font-size: 18px;
+		color: var(--celeste);
+	}
+
+	#about-img-container {
+		display: inline-block;
+		align-items: center;
+		flex:1;
+		width: 50%;
+	}
+
+	#img-local-onlyflans {
+        width: 520px;
+        height: auto;
+		flex:1;
+    }
+
+	#about-text1 {
+		width: 400px;
+		text-align: center;
+		font-style: italic;
+		
+		
+	}
+
+</style>
+
+{% endblock %}
