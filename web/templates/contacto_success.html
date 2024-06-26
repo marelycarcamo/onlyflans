@@ -1,7 +1,35 @@
-{% extends 'base.html' %}
-{% block content %}
-<div class="container">
-    <h1>Gracias por contactarnos</h1>
-    <p>Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.</p>
+{% extends 'base.html' %} {% block content %}
+<div class="container py-5">
+	<h1>Gracias por contactarnos</h1>
+	<p>Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.</p>
+	<button
+		id="back-to-home"
+		type="button"
+		class="btn btn-info btn-lg text-white">
+		Volver al Inicio
+	</button>
 </div>
+
+<style>
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: var(--celeste);
+	}
+
+	#back-to-home {
+		margin-block: 20px;
+	}
+</style>
+
+<script>
+    $(document).ready(function() {
+        $('#back-to-home').click(function() {
+            window.location.href = "{% url 'index' %}";
+        });
+    });
+    
+</script>
+
 {% endblock %}

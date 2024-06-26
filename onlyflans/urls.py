@@ -13,4 +13,5 @@ urlpatterns = [
     path('acerca/', views.about, name='about'),
     path('bienvenido/', views.welcome, name='welcome'),    
     path('contacto/', views.contacto, name='contacto'),
+    path('exito/', views.contacto_success, name='contacto_success'),
 ]

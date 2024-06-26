@@ -9,24 +9,25 @@
 			rel="stylesheet"
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous" />
-			{% load static %}
-			<link rel="icon" href="{% static 'img\icono-of.png' %}" type="image/x-icon">
-			
+		{% load static %}
+		<link
+			rel="icon"
+			href="{% static 'img\icono-of.png' %}"
+			type="image/x-icon" />
 	</head>
 	<body>
 		<div class="container position-relative">
 			<div class="row">
-				{% include 'header.html' %}
-				<nav class="col-12">{% include 'navbar.html' %}</nav>
+				{% include 'header.html' %} {% include 'navbar.html' %}
 
-				<div id="contenido" class="col-12">
-					{%block content %}
+				<div id="contenido">
 					{% block h1 %}
-					<h1>CONTENIDO</h1>
-					{% endblock %}
-					{% block image %}
-					{%endblock %}
-					{%endblock%}
+					<h1></h1>
+					{% endblock %} {%block content %}
+					<!-- contenido personalizado de cada plantilla -->
+					{%block image %}
+					<!-- En caso de agregar una imagen -->
+					{%endblock %} {% endblock%}
 				</div>
 
 				{% include 'footer.html' %}
@@ -34,21 +35,19 @@
 		</div>
 
 		<style>
-			h1{
-				color: var(--celeste)
+			h1 {
+				color: var(--celeste);
 			}
+
 			body {
 				background-color: darkslategray;
 				font-family: Verdana, Geneva, Tahoma, sans-serif;
 				color: rgb(254, 245, 237);
-			
 			}
 
 			#contenido {
 				background-color: rgb(189, 196, 208);
-				
 			}
-
 			:root {
 				--celeste: rgb(2, 152, 202);
 			}

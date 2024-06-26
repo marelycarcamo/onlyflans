@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 # def index(request):
 #   return render(request, 'index.html')
@@ -11,7 +11,7 @@ from django.shortcuts import render
 
 
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 
 from web.forms import ContactFormForm
@@ -26,22 +26,27 @@ from .models import ContactForm, Flan
 
 
 def index(request):
-    flanes = Flan.objects.all()  # Obtener todos los objetos Flan
-    context = {'flanes': flanes}  # Crear un diccionario de contexto
+    flanes_publicos = Flan.objects.filter(js_private=False)  # Filtrar los flanes públicos
+    context = {'flanes': flanes_publicos}  # Crear un diccionario de contexto con los flanes públicos
     return render(request, 'index.html', context)  # Pasar el contexto a la plantilla
+
+def welcome(request):
+    flanes_privados = Flan.objects.filter(js_private=True)  # Filtrar los flanes públicos
+    context = {'flanes': flanes_privados}  # Crear un diccionario de contexto con los flanes públicos
+    return render(request, 'welcome.html', context)  # Pasar el contexto a la plantilla
 
 
 def about(request):
 # The code snippet `template = loader.get_template('about.html')` is loading the template file named
 # 'about.html' using Django's template loader. This function retrieves the template object associated
 # with the specified template name.
-  template = loader.get_template('about.html')
-  return HttpResponse(template.render())
+    template = loader.get_template('about.html')
+    return HttpResponse(template.render())
 
 
-def welcome(request):
-  template = loader.get_template('welcome.html')
-  return HttpResponse(template.render())
+# def welcome(request):
+#     template = loader.get_template('welcome.html')
+#     return HttpResponse(template.render())
 
 # def contacto(request):
 #   template = loader.get_template('contacto.html')
@@ -55,14 +60,15 @@ def contacto(request):
     if request.method == 'POST':
         form = ContactFormForm(request.POST)
         if form.is_valid():
-            # Aquí guardar los datos del formulario en la base de datos
+            # guardar los datos del formulario en la base de datos
             ContactForm.objects.create(
                 customer_email=form.cleaned_data['customer_email'],
                 customer_name=form.cleaned_data['customer_name'],
                 message=form.cleaned_data['message']
             )
-            # Redirigir a una página de éxito o mostrar un mensaje
-            return render(request, 'contacto_success.html')
+            # Redirigir a una página de éxito
+            return redirect ('contacto_success')
+            
             # return HttpResponseRedirect('/')
     else:
         form = ContactFormForm()
@@ -73,5 +79,8 @@ def contacto(request):
     # 'form', which allows the template to access and display the form fields or data.
     return render(request, 'contacto.html', {'form': form})
 
+
+def contacto_success(request):
+    return render(request, 'contacto_success.html', {'success': True})
 
 
