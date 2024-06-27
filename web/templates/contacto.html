@@ -9,8 +9,8 @@
 
     <form action="/contacto/" method="POST">
         {% csrf_token %}
-        {{form.non_fields_errors}}
-        <!-- {{ form.as_p }}  -->
+        <!-- {{form.non_fields_errors}} -->
+        {{ form.as_p }} 
         <button type="submit" class="btn btn-info btn-lg text-white">Enviar</button>
     </form>
 </div>

@@ -1,0 +1,8 @@
+section div{
+	display:flex;
+	justify-content: center;
+}
+
+section div img{
+	filter: opacity(30%);
+}

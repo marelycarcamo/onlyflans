@@ -2,11 +2,11 @@
 
 <img id="logo" src="{% static 'img\onlyflans.png' %}" alt="logo-onlyflans" />
 
-<header>
+<header class="g-0">
 	<img
 		id="img-header"
 		src="{% static 'img\fondo-header.jpg' %}"
-		alt="fondo-imagen-flan" />
+		alt="fondo-flan" />
 </header>
 
 <style>
@@ -21,22 +21,16 @@
 		margin-top: 0%;
 		margin-left: 50%;
 		transform: translate(-50%, 25%);
-		position: absolute;
+		
 	}
 
 	header {
-		background-image: url("{% static 'img\fondo-header.jpg' %}");
-		background-repeat: no-repeat; /* Opcional: define cómo se repite la imagen */
-		background-position: center; /* Opcional: define la posición de la imagen */
-		background-size: cover; /* Opcional: define cómo se escala la imagen */
-		overflow: hidden;
+		border: 1px solid var(--celeste);
 	}
 
-	#img-header{
-		filter: blur(2px);
+	header img {
 		width: 100%;
 		height: auto;
+		filter: blur(2px);
 	}
-
-	
 </style>

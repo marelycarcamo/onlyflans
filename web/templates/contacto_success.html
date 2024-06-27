@@ -2,12 +2,14 @@
 <div class="container py-5">
 	<h1>Gracias por contactarnos</h1>
 	<p>Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.</p>
+	<a href="{% url 'index' %}">
 	<button
 		id="back-to-home"
 		type="button"
 		class="btn btn-info btn-lg text-white">
 		Volver al Inicio
 	</button>
+</a>
 </div>
 
 <style>
@@ -23,13 +25,5 @@
 	}
 </style>
 
-<script>
-    $(document).ready(function() {
-        $('#back-to-home').click(function() {
-            window.location.href = "{% url 'index' %}";
-        });
-    });
-    
-</script>
 
 {% endblock %}
