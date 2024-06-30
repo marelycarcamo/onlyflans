@@ -122,3 +122,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# The lines `LOGIN_REDIRECT_URL = '/bienvenido'` and `LOGOUT_REDIRECT_URL = '/'` in the Django
+# settings file are specifying the URLs where the user should be redirected after logging in and
+# logging out, respectively.
+LOGIN_REDIRECT_URL = '/bienvenido'
+LOGOUT_REDIRECT_URL = '/'

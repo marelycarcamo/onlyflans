@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 
 # def index(request):
 #   return render(request, 'index.html')
@@ -30,6 +31,11 @@ def index(request):
     context = {'flanes': flanes_publicos}  # Crear un diccionario de contexto con los flanes públicos
     return render(request, 'index.html', context)  # Pasar el contexto a la plantilla
 
+
+
+
+#La vista protegida debe llevar el decorador @login_required
+@login_required
 def welcome(request):
     flanes_privados = Flan.objects.filter(js_private=True)  # Filtrar los flanes públicos
     context = {'flanes': flanes_privados}  # Crear un diccionario de contexto con los flanes públicos
@@ -37,20 +43,7 @@ def welcome(request):
 
 
 def about(request):
-# The code snippet `template = loader.get_template('about.html')` is loading the template file named
-# 'about.html' using Django's template loader. This function retrieves the template object associated
-# with the specified template name.
-    template = loader.get_template('about.html')
-    return HttpResponse(template.render())
-
-
-# def welcome(request):
-#     template = loader.get_template('welcome.html')
-#     return HttpResponse(template.render())
-
-# def contacto(request):
-#   template = loader.get_template('contacto.html')
-#   return HttpResponse(template.render())
+    return render(request, 'about.html')
 
 
 def base(request):
@@ -80,7 +73,14 @@ def contacto(request):
     return render(request, 'contacto.html', {'form': form})
 
 
+def login(request):
+    return redirect ('/accounts/login.html')
+
 def contacto_success(request):
-    return render(request, 'contacto_success.html', {'success': True})
+    return render(request, '/contacto_success.html', {'success': True})
 
+def login_welcome(request):
+    return render(request, '/accounts/login_welcome.html')
 
+# def logout(request):
+#     return redirect('/accounts/login.html')

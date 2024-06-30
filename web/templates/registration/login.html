@@ -1,33 +1,50 @@
-<!-- <h1>Iniciar sesión</h1>
-<form action="" method="POST">
-	{% if form.errors %}
-	<p>Tu nombre de usuario no es correcto</p>
-	{% endif %} {% if next %} {% if user.is_authenticated %}
-	<p>
-		Tu cuenta no tiene acceso a esta página. Por favor logueate con una cuenta
-		con acceso
-	</p>
-	{% else %}
-	<p>Por favor, logueate para visitar esta página.</p>
-	{% endif %} {% endif %}
+{% extends 'base.html' %} {% block h1 %}
+<h1>Iniciar sesión</h1>
+{% endblock %}
 
-	<form method="POST" action="{% url 'login' %}">
-		{% csrf_token %}
 
-		<div>
-			<td>{{ form.username.label_tag}}</td>
-			<td>{{form.username}}</td>
-		</div>
-		<div>
-			<td>{{ form.password.label_tag }}</td>
-			<td>{{ form.password}}</td>
-		</div>
+{% block content %}
+<div>
+	<form action="" method="POST">
+		{% if form.errors %}
+		<p>Tu nombre de usuario no es correcto</p>
+		{% endif %} {% if next %} {% if user.is_authenticated %}
+		<p>
+			Tu cuenta no tiene acceso a esta página. Por favor logueate con una cuenta
+			con acceso
+		</p>
+		{% else %}
+		<p>Por favor, logueate para visitar esta página.</p>
+		{% endif %} {% endif %}
 
-		<div>
-			<input type="submit" value="login" />
-			<input type="hidden" name="next" value="{{next}}" />
-		</div>
+		<form method="POST" action="{% url 'login' %}">
+			{% csrf_token %}
+
+			<div>
+				<td>{{ form.username.label_tag}}</td>
+				<td>{{form.username}}</td>
+			</div>
+			<div>
+				<td>{{ form.password.label_tag }}</td>
+				<td>{{ form.password}}</td>
+			</div>
+
+			<div>
+			
+					<button type="submit" value="login" class="btn btn-info text-white">
+						Enviar
+					</button>
+				
+
+				<input type="hidden" name="next" value="{{next}}" />
+			</div>
+		</form>
+		{#Assumes you setup the password_reset view in your URLconf#}
+		<p><a href="{% url 'password_reset' %}">password reset</a></p>
 	</form>
-	{#Assumes you setup the password_reset view in your URLconf#}
-</form>
--->
+</div>
+{%endblock %}
+
+
+
+
