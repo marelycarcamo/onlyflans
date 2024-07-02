@@ -61,25 +61,28 @@
 				--celeste: rgb(2, 152, 202);
 			}
 
-			form{
+			.bg-celeste{
+				background: var(--celeste);
+				color: white;
+			}
+
+			.bg-celeste:hover{
+				background:white;
+				color: var(--celeste)
+			}
+
+			.text-celeste{
 				color: var(--celeste);
-				display:flex;
-				flex-direction: column;
-				align-items: end;
+				background: white;
 			}
-			
-			input,textarea{
-				border:none;
-				border-radius: 8px;
-				transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
+
+			.text-celeste:hover{
+				background:white;
+				color: var(--celeste);
 			}
-			
-			
-			input:focus, textarea:focus {
-				border:none;
-				box-shadow: 0 0 10px rgba(2, 152, 202, 0.7); /* Añade un resplandor */
-				outline: none; /* Elimina el borde por defecto */
-			}
+
+
+
 		</style>
 		<script
 			src="https://code.jquery.com/jquery-3.7.1.js"

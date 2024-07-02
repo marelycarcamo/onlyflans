@@ -9,17 +9,14 @@ from web import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('',views.index, name='index'),
     path('acerca/', views.about, name='about'),
     path('bienvenido/', views.welcome, name='welcome'),    
     path('contacto/', views.contacto, name='contacto'),
     path('exito/', views.contacto_success, name='contacto_success'),
-    
-    path('accounts/', include('django.contrib.auth.urls')),
-    
     path('accounts/login/', views.login, name='login'),
-
-        # path('login_welcome/', views.login_welcome, name='login_welcome'),
-    # path('accounts/logout/', views.logout, name='logout'),
+    path('accounts/logout/', views.logout, name='logout'),
+  
 
 ]

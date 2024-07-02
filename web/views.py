@@ -73,14 +73,15 @@ def contacto(request):
     return render(request, 'contacto.html', {'form': form})
 
 
-def login(request):
-    return redirect ('/accounts/login.html')
-
 def contacto_success(request):
     return render(request, '/contacto_success.html', {'success': True})
 
-def login_welcome(request):
-    return render(request, '/accounts/login_welcome.html')
+
+def login(request):
+    return redirect ('/accounts/login.html')
 
 # def logout(request):
-#     return redirect('/accounts/login.html')
+#     return redirect ('/accounts/logout.html')
+
+def  logout(request):
+    return render(request, 'logout.html', {'message': '¡Hasta pronto! Vuelve pronto.'})

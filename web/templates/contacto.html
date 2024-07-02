@@ -1,46 +1,20 @@
-
-{% extends 'base.html' %}
-{% block h1 %}
+{% extends 'base.html' %}{% load static %} {% block h1 %}
 <h1>Contáctenos</h1>
-{% endblock %}
+{% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static '/css/formulario.css' %}" />
 
-{% block content %}
-<div class="container my-5 d-flex justify-content-center">
-
-    <form action="/contacto/" method="POST">
-        {% csrf_token %}
-        <!-- {{form.non_fields_errors}} -->
-        {{ form.as_p }} 
-        <button type="submit" class="btn btn-info btn-lg text-white">Enviar</button>
-    </form>
+<div class="container-form">
+	<form action="/contacto/" method="POST">
+		{% csrf_token %}
+		<!-- {{form.non_fields_errors}} -->
+		{{ form.as_p }}
+		<button type="submit" class="btn btn-info btn-lg text-white">Enviar</button>
+	</form>
 </div>
-
-
 <style>
-
-form{
-    color: var(--celeste);
-    font-size: 20px;
-    display:flex;
-    flex-direction: column;
-    align-items: end;
-}
-
-input,textarea{
-    border:none;
-    border-radius: 8px;
-    width:500px;
-    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
-}
-
-
-input:focus, textarea:focus {
-    border:none;
-    box-shadow: 0 0 10px rgba(2, 152, 202, 0.7); /* Añade un resplandor */
-    outline: none; /* Elimina el borde por defecto */
-}
-
-
+    input{
+        width: 420px;
+    }
 </style>
 
 {% endblock %}

@@ -1,0 +1,30 @@
+div{
+	padding-block: 4px;
+}
+
+.container-form{
+	display:flex;
+	justify-content: center;
+}
+
+
+form{
+color: var(--celeste);
+display:flex;
+flex-direction: column;
+align-items: end;
+margin-block: 5px;
+}
+
+input,textarea{
+border:none;
+border-radius: 8px;
+transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+
+input:focus, textarea:focus {
+border:none;
+box-shadow: 0 0 10px rgba(2, 152, 202, 0.7); /* Añade un resplandor */
+outline: none; /* Elimina el borde por defecto */
+}
