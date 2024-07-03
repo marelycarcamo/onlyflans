@@ -44,8 +44,8 @@
 							<a class="dropdown-item" href="{% url 'index' %}"
 								>Flanes Onlyflans</a
 							>
-							<li><hr class="dropdown-divider" /></li>
 						</li>
+						<li><hr class="dropdown-divider" /></li>
 						<li>
 							<a class="dropdown-item" href="{% url 'delicias' %}"
 								>Delicias del Sur</a
@@ -69,40 +69,44 @@
 						Nosotros
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="{% url 'about' %}">Quienes Somos</a></li>
-						<li><a class="dropdown-item" href="{% url 'contacto' %}">Contacto</a></li>
+						<li>
+							<a class="dropdown-item" href="{% url 'about' %}"
+								>Quienes Somos</a
+							>
+						</li>
+						<li>
+							<a class="dropdown-item" href="{% url 'contacto' %}">Contacto</a>
+						</li>
 						<li><hr class="dropdown-divider" /></li>
-						
 					</ul>
 				</li>
 			</ul>
 
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 				<li class="nav-item nav-fa-brands">
-					<a class="nav-link" href="{% url 'facebook_redirect' %}" target="_blank"
+					<a
+						class="nav-link"
+						href="{% url 'facebook_redirect' %}"
+						target="_blank"
 						><i class="fa-brands fa-facebook"></i
 					></a>
 				</li>
 				<li class="nav-item nav-fa-brands">
 					<a
 						class="nav-link"
-						href="{% url 'twitter_redirect' %}" target="_blank"
+						href="{% url 'twitter_redirect' %}"
+						target="_blank"
 						><i class="fa-brands fa-twitter"></i
 					></a>
 				</li>
 				<li class="nav-item nav-fa-brands">
 					<a
 						class="nav-link"
-						href="{% url 'instagram_redirect' %}" target="_blank"
+						href="{% url 'instagram_redirect' %}"
+						target="_blank"
 						><i class="fa-brands fa-instagram"></i
 					></a>
 				</li>
-				<!-- <li class="nav-item">
-					<a class="nav-link" href="{% url 'login' %}">Login</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{% url 'logout' %}">Logout</a>
-				</li> -->
 				<li>
 					{% if not user.is_authenticated %}<a href="{% url 'login' %}">
 						<button type="button" class="btn btn-auth text-white">Login</button>
@@ -125,69 +129,53 @@
 </nav>
 
 <style>
+	/* color de fondo del navbar */
 	.container-navbar {
 		background-color: darkslategray;
 	}
 
+	/* define color de texto del navbar */
 	a {
 		color: white !important;
-		font-size: large !important;
 	}
 
-	a:hover {
-		color: darkslategrey;
+	/* distancia entre los elementos del navbar */
+	.nav-item {
+		padding-inline: 10px;
 	}
 
-	li {
-		padding-inline: 3px;
-	}
-
-	#ul-1 li:hover {
-		/* Estilos para el hover */
+	/* Hover del menú principal */
+	.navbar-nav .nav-link:hover {
+		color: white;
 		background-color: var(--celeste);
 	}
 
-	#caja-botones {
-		float: right;
-		position: absolute;
-		right: 10px; /*ok*/
+	/* Estilos para los submenús desplegables */
+	.dropdown-menu {
+		background-color: #848d8e;
 		border: none;
 	}
 
-	.nav-link {
-		font-size: 18px;
+	/* Hover submenu */
+	.dropdown-menu .dropdown-item:hover {
+		color: var(--celeste) !important;
+		background-color: white;
 	}
 
-	.btn-auth :hover {
-		color: white;
-	}
-
+	/* Cambia el color del borde del botón */
 	.navbar-toggler {
-		border-color: rgba(
-			255,
-			255,
-			255,
-			0.5
-		); /* Cambia el color del borde del botón */
+		border-color: rgba(255, 255, 255, 0.5);
 	}
 
+	/* Cambia el color del ícono a blanco */
 	.navbar-toggler-icon {
 		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-		/* Cambia el color del ícono a blanco */
 	}
 
+	/* Cambia el resplandor a blanco */
 	.navbar-toggler:focus {
 		outline: none;
-		box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5); /* Cambia el resplandor a blanco */
-	}
-
-	.dropdown-menu {
-		background: steelblue;
-	}
-
-
-	.nav-fa-brands{
-		display:none;
+		box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -195,20 +183,9 @@
 			font-size: 16px;
 		}
 
-		#caja-botones {
-			position: static;
+		/*Oculta las redes sociales*/
+		.nav-fa-brands {
+			display: none;
 		}
-
-		#nav-2 {
-			flex-direction: column;
-			align-items: start;
-		}
-
-		/*botones de login y logout*/
-		.btn-auth {
-			margin-top: 10px;
-		}
-
-		
 	}
 </style>
