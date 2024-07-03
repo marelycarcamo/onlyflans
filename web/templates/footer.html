@@ -1,14 +1,58 @@
 <footer>
-	Desarrollado por<span style="font-style: italic; color: azure"> Marely</span>
-	para Desafío Latam | 2024
+	{% load static %}
+
+	<div class="row">
+		<div class="col-6 d-flex flex-column justify-content-center">
+			<div class="d-flex flex-row justify-content-center mb-4 redes-sociales">
+				<a
+					class="nav-link mx-2"
+					href="{% url 'facebook_redirect' %}"
+					target="_blank"
+					><i class="fa-brands fa-facebook" style="font-size: xx-large"></i
+				></a>
+
+				<a
+					class="nav-link mx-2"
+					href="{% url 'twitter_redirect' %}"
+					target="_blank"
+					><i class="fa-brands fa-twitter" style="font-size: xx-large"></i
+				></a>
+				<a
+					class="nav-link mx-2"
+					href="{% url 'instagram_redirect' %}"
+					target="_blank"
+					><i class="fa-brands fa-instagram" style="font-size: xx-large"></i
+				></a>
+			</div>
+			<div>
+				Desarrollado por<span style="font-style: italic; color: azure">
+					Marely</span
+				>
+				para Desafío Latam | 2024
+			</div>
+		</div>
+		<div class="col-6 d-flex flex-row justify-content-start">
+			<img id="logo-footer" src="{% static '/img/onlyflans.png' %}" alt="" />
+		</div>
+	</div>
 </footer>
 
 <style>
 	footer {
-		padding-block: 25px;
+		padding-block: 50px;
 		background-color: var(--celeste);
 		color: white;
-		font-size: medium;
+		font-size: larger;
 		text-align: center;
+	}
+
+	#logo-footer {
+		width: 100%;
+		max-width: 500px;
+		height: auto;
+	}
+
+	.redes-sociales a i:hover {
+		color: black!important;
 	}
 </style>
