@@ -1,20 +1,13 @@
 {% extends 'base.html' %} {% load static %} {% block h1 %}
 <h1>Acerca de Nosotros</h1>
-{% endblock %} 
+{% endblock %} {% block content %}
 
-{% block content %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}" />
-<section class="section-1 g-0">
-	<div class="about-container my-5 g-0">
+<div class="row">
 
-		<div class="container-text g-0">
-			<br><br>
-				<h3>Bienvenidos</h3>
-				<br>
-				Bienvenidos a Onlyflans, una cafetería especializada en los flanes más exquisitos. Fundada en 1924, nuestra misión es ofrecer a nuestros clientes una experiencia única con flanes de alta calidad, elaborados con los mejores ingredientes.
-				<br><br>
-				<h3>Nuestra Historia</h3>
-				<br />
+	<section class="col-12 d-flex justify-content-lg-evenly">
+		<div class="col-lg-5 text-celeste px-4"  style="max-width: 400px;">
+			<h3>Nuestra Historia</h3>
+			<p>
 				En el corazón de Valdivia, la familia Enoch se convirtió en sinónimo de
 				dulzura y tradición. Tras su llegada a comienzos del siglo pasado,
 				durante la ola de inmigración alemana, establecieron una pequeña empresa
@@ -26,77 +19,131 @@
 				sino también un punto de encuentro para los amantes de la historia y la
 				cultura culinaria, atrayendo a visitantes de todo el mundo ansiosos por
 				descubrir los secretos de los famosos budines chilenos.
-				<br /><br />
-
-				<span> <h3>Nuestra Misión</h3></span>
-				<br />
-				Nuestra pasión por los flanes comenzó en la cocina de nuestra abuela,
-				donde aprendimos las recetas tradicionales que hoy en día perfeccionamos
-				y ofrecemos en nuestra cafetería.
-				<br /><br />
-				<span><h3>Variedad de Flanes</h3></span>
-				<br />
-				Desde el clásico flan de vainilla hasta innovadores sabores como el
-				flanF de matcha y el flan de coco, cada uno de nuestros productos es una
-				obra de arte culinaria.
-				<br><br>
-				<span><h3>El Equipo</h3></span>
-				<br>
-				Conoce a nuestro talentoso equipo de chefs y baristas, quienes trabajan
-				incansablemente para ofrecerte los mejores flanes y el mejor café.
-				<br><br>
-				<span><h3>Compromiso con la Comunidad</h3></span>
-				<br>
-				Nos enorgullece apoyar a nuestra comunidad local participando en eventos
-				y colaborando con productores locales para obtener los ingredientes más
-				frescos y sostenibles.
 			</p>
 		</div>
-		<div class="container-img g-0"></div>
-	</div>
-</section>
+		<div class="cl-12 col-lg-7 d-flex flex-row justify-content-center">
+			<img
+				src="{% static '/img/local-onlyflans.png' %}"
+				style="max-width: 600px; width: 100%; height: 600px"
+				alt="" />
+		</div>
+	</section>
+
+	<section class="col-12 d-flex flex-row justify-content-evenly">
+		<div class="col-7">
+			<img src="{% static '/img/mision.jpg' %}" alt="" />
+		</div>
+
+		<div class="col-5 text-celeste px-4" style="max-width: 400px">
+			<h3>Nuestra Misión</h3>
+			<p>
+				La misión de nuestra cafetería, ubicada en el corazón del sur de Chile,
+				es ofrecer una experiencia culinaria única a través de nuestros
+				exquisitos flanes. Nos dedicamos a elaborar cada flan con los más altos
+				estándares de calidad, utilizando ingredientes locales y recetas
+				tradicionales que reflejan la riqueza gastronómica de nuestra región.
+				Nuestro compromiso es brindar un servicio excepcional, creando un
+				ambiente acogedor donde cada visita se convierta en un momento memorable
+				para nuestros clientes.
+			</p>
+		</div>
+	</section>
+
+	<section class="col-12 d-flex flex-row justify-content-evenly">
+		<div class="col-5 text-celeste px-4" style="max-width: 400px">
+			<h3>Variedad de Productos</h3>
+			<p>
+				Nuestra selección de flanes, cafés y dulces artesanales es una verdadera
+				celebración de los sabores tradicionales y la calidad superior. Cada
+				flan se prepara siguiendo recetas clásicas, asegurando una textura suave
+				y un sabor que simplemente se derrite en la boca. Nuestros cafés,
+				seleccionados meticulosamente, ofrecen una experiencia única con cada
+				sorbo, mientras que nuestros dulces artesanales son el resultado de la
+				pasión y la dedicación, elaborados con ingredientes locales para
+				garantizar frescura y autenticidad. Juntos, crean una oferta
+				irresistible que deleita a todos los paladares.
+			</p>
+		</div>
+		<div class="col-7">
+			<img src="{% static '/img/variedades-productos.jpg'%}" alt="" />
+		</div>
+	</section>
+
+	<section class="col-12 d-flex flex-row justify-content-evenly">
+		<div class="col-7">
+			<img src="{% static '/img/nuestro-equipo.jpg' %}" alt="">
+		</div>
+		<div class="col-5 text-celeste px-4" style="max-width: 400px">
+			<h3>Nuestro equipo</h3>
+				Onlyflans es una cafetería única que ofrece una experiencia culinaria
+				inolvidable con su especialidad en flanes, cafés y dulces artesanales.
+				Cada flan es una obra de arte, elaborado con pasión y los mejores
+				ingredientes locales, mientras que los cafés son seleccionados y
+				tostados a la perfección para complementar la dulzura de los postres. El
+				equipo de Onlyflans se dedica a crear un ambiente acogedor donde cada
+				visita es una oportunidad para disfrutar de sabores auténticos y un
+				servicio excepcional.
+			</p>
+		</div>
+	</section>
+
+	<section class="col-12 d-flex flex-row justify-content-evenly">
+		<div class="col-5 text-celeste px-4" style="max-width: 400px">
+			<h3>Compromiso con la Comunidad y el Medio Ambiente</h3>
+			<p>
+				Onlyflans, nuestra cafetería, se destaca por su compromiso con la
+				comunidad y el medio ambiente. Adoptamos prácticas sostenibles, como el
+				uso de productos orgánicos y locales, reduciendo así nuestra huella de
+				carbono. Además, colaboramos con proyectos comunitarios y educativos
+				para fomentar la conciencia ambiental. Nuestro objetivo es no solo
+				ofrecer delicias culinarias, sino también contribuir al bienestar de
+				nuestro entorno y sus habitantes.
+			</p>
+		</div>
+		<div class="col-7">
+			<img src="{% static '/img/compromiso-comunidad.jpeg' %}" alt="" class="" />
+		</div>
+	</section>
+</div>
+
+<div>
+	<form action=""></form>
+</div>
 
 <style>
-	.container-text {
-		margin-inline: 15%;
-		z-index: 3;
-		display: flex;
-		flex-direction: column;
-		align-items: start;
-		text-align: center;
+	section {
+		padding-top: 50px;
+	}
+
+	
+	section {
+		padding-block: 60px;
+		position: relative; /* Needed for absolute positioning of overlay */
+	  }
+	  
+	  .section-overlay {
 		position: absolute;
-		color: black;
-		font-size: 20px;
-		text-align: center;
-		margin-bottom: 10px;
-		
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(2, 152, 202, 0.5); /* Semi-transparent blue */
+		z-index: -1; /* Place behind the content */
+	  }
+	  
+	
+
+	img {
+		width: 100%;
 	}
 
-	h3 {
-		color: var(--celeste);
-		margin-bottom: 2px;
-		text-align: center;
-	}
 
 
-	.container-img {
-		width: 100%; /* Ajusta el ancho según tus necesidades */
-		height: 1700px; /* Ajusta la altura según tus necesidades */
-		background-image: url("{% static 'img/local-onlyflans.png' %}"); /* Ruta a tu imagen */
-		background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el div */
-		background-position: center; /* Centra la imagen en el div */
-		background-repeat: no-repeat; /* Evita que la imagen se repita */
-		filter: opacity(20%);
-		position: relative;
+
+	@media only screen and (max-width: 992px) {
+
 
 	}
-
-	<!-- .about-container {
-		display:flex;
-		flex-direction: row;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	} -->
 </style>
 
 {% endblock %}

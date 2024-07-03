@@ -31,4 +31,12 @@ class Cafe(models.Model):
     js_private = models.BooleanField(default=False)
 
 
+class Dulce(models.Model):
+    dulce_uuid = models.UUIDField(default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=64)
+    description = models.TextField()
+    image_url = models.URLField(blank=True)
+    slug = models.SlugField()
+    js_private = models.BooleanField(default=False)
     
+

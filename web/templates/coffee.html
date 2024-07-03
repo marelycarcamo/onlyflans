@@ -1,23 +1,18 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block h1 %}
-<h1>Nuestros productos</h1>
-
-
+{% extends 'base.html' %}{% load static %} {% block h1 %}
+<h1>Nuestra cafetería</h1>
 {% endblock %}
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/card.css' %}">
 <div class="container my-5">
     <div id="products">
-        {% for flan in flanes %}
+        {% for cafe in cafes %}
         <div>
             <div class="card" style="width: 18rem;">
-                <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}" />
+                <img src="{{ cafe.image_url }}" class="card-img-top" alt="{{ cafe.name }}" />
                 <div class="card-body">
-                    <h5 class="card-title">{{ flan.name }}</h5>
-                    <p class="card-text">{{ flan.description }}</p>
+                    <h5 class="card-title">{{ cafe.name }}</h5>
+                    <p class="card-text">{{ cafe.description }}</p>
                     <!-- Botón 'Leer más' -->
                     <button class="btn btn-link read-more">Leer más</button>
                     <!-- Botón 'Leer menos' -->
@@ -32,3 +27,7 @@
 <!-- Asegúrate de que el archivo JavaScript se cargue correctamente -->
 <script src="{% static 'js/card.js' %}"></script>
 {% endblock %}
+
+
+
+

@@ -1,11 +1,23 @@
 from django.contrib import admin
-from .models import Flan
-from .models import ContactForm
+
 
 # Aquí se registra el modelo Flan
+from .models import Flan
 admin.site.register(Flan) 
 
 # Aquí se registra el modelo ContactForm
+from .models import ContactForm
 admin.site.register(ContactForm)
+
+#Registro del modelo Cafe
+from .models import Cafe
+admin.site.register(Cafe)
+
+#Registro del modelo Dulce
+from .models import Dulce
+admin.site.register(Dulce)
+
+
+
 
 

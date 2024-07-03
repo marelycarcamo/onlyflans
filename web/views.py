@@ -17,13 +17,16 @@ from django.template import loader
 
 from web.forms import ContactFormForm
 
-from .models import ContactForm, Flan
+from .models import Cafe, ContactForm, Dulce, Flan
 
-# def index(request):
-#    flanes = Flan.objects.all()
-#    template = loader.get_template('index.html')
-#    context = {'flanes': flanes,}
-#    return HttpResponse(template.render())
+
+
+
+def coffee(request):
+    cafes = Cafe.objects.all()  # Filtrar los flanes públicos
+    context = {'cafes': cafes}  # Crear un diccionario de contexto con los flanes públicos
+    return render(request, 'coffee.html', context)  # Pasar el contexto a la plantilla
+
 
 
 def index(request):
@@ -31,7 +34,10 @@ def index(request):
     context = {'flanes': flanes_publicos}  # Crear un diccionario de contexto con los flanes públicos
     return render(request, 'index.html', context)  # Pasar el contexto a la plantilla
 
-
+def delicias(request):
+    dulces = Dulce.objects.all() # Filtrar los flanes públicos
+    context = {'dulces': dulces}  # Crear un diccionario de contexto con los flanes públicos
+    return render(request, 'delicias.html', context)  # Pasar el contexto a la plantilla
 
 
 #La vista protegida debe llevar el decorador @login_required
@@ -85,3 +91,19 @@ def login(request):
 
 def  logout(request):
     return render(request, 'logout.html', {'message': '¡Hasta pronto! Vuelve pronto.'})
+
+
+
+def facebook_redirect(request):
+    return redirect('https://web.facebook.com/Cafe.Cosas.Ricas.Valdivia/?_rdc=1&_rdr')
+
+def twitter_redirect(request):
+    return redirect('https://twitter.com/cafecosasricas')
+
+def instagram_redirect(request):
+    return redirect('https://www.instagram.com/cosasricas.valdivia/')
+
+
+def logo_onlyflans_redirect(request):
+    return redirect('https://photos.onedrive.com/share/22F87BD4A80CE19A!327001?cid=22F87BD4A80CE19A&resId=22F87BD4A80CE19A!327001&authkey=!ABHVndQy7jl0pDk&ithint=photo&e=aVkvph')
+            
