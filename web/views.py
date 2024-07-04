@@ -15,9 +15,9 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 
-from web.forms import ContactFormForm
+from web.forms import ContactFormForm, ContactoEmpresaForm
 
-from .models import Cafe, ContactForm, Dulce, Flan
+from .models import Cafe, ContactForm, ContactoEmpresa, Dulce, Flan
 
 
 
@@ -80,7 +80,9 @@ def contacto(request):
 
 
 def contacto_success(request):
-    return render(request, '/contacto_success.html', {'success': True})
+    return render(request, 'contacto_success.html')
+
+
 
 
 def login(request):
@@ -104,6 +106,22 @@ def instagram_redirect(request):
     return redirect('https://www.instagram.com/cosasricas.valdivia/')
 
 
-def logo_onlyflans_redirect(request):
-    return redirect('https://photos.onedrive.com/share/22F87BD4A80CE19A!327001?cid=22F87BD4A80CE19A&resId=22F87BD4A80CE19A!327001&authkey=!ABHVndQy7jl0pDk&ithint=photo&e=aVkvph')
+def contacto_empresa(request):
+    if request.method == 'POST':
+        form = ContactoEmpresaForm(request.POST)
+        if form.is_valid():
+            # guardar los datos del formulario en la base de datos
+            ContactoEmpresa.objects.create(
+                email_empresa=form.cleaned_data['email_empresa'],
+                name_empresa=form.cleaned_data['name_empresa'],
+                phone_empresa=form.cleaned_data['phone_empresa'],
+                message_empresa=form.cleaned_data['message_empresa']
+            )
+            # Redirigir a una página de éxito
+            return redirect ('contacto_success')
             
+            # return HttpResponseRedirect('/')
+    else:
+        form = ContactoEmpresaForm()
+
+    return render(request, 'contacto_empresa.html', {'form': form})

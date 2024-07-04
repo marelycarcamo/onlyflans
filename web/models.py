@@ -40,3 +40,9 @@ class Dulce(models.Model):
     js_private = models.BooleanField(default=False)
     
 
+class ContactoEmpresa(models.Model):
+    contacto_empresa_uuid = models.UUIDField(default=uuid.uuid4, editable=False)
+    name_empresa=models.CharField(max_length=64)
+    email_empresa=models.EmailField()
+    phone_empresa=models.CharField(max_length=12)
+    message_empresa=models.TextField()

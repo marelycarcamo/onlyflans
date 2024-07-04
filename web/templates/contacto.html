@@ -1,10 +1,13 @@
 {% extends 'base.html' %}{% load static %} {% block h1 %}
-<h1>Contáctenos</h1>
+<div>
+<h1>Suscríbete</h1>
+<p>Suscríbete a nuestras noticias y novedades. Te esperamos !</p>
+
 {% endblock %} {% block content %}
 <link rel="stylesheet" href="{% static '/css/formulario.css' %}" />
 
 <div class="container-form">
-	<form action="/contacto/" method="POST">
+	<form action="{% url 'contacto' %}" method="POST">
 		{% csrf_token %}
 		<!-- {{form.non_fields_errors}} -->
 		{{ form.as_p }}
@@ -15,6 +18,12 @@
     input{
         width: 420px;
     }
+p{
+	font-size: 16px;
+	color: var(--celeste);
+	
+}
 </style>
-
+<link rel="stylesheet" href="{% static '/js/formulario.js' %}" />
+</div>
 {% endblock %}

@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-expand-lg bg-transparent">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="{% url 'logo_onlyflans_redirect'%}"></a>
+		<a class="navbar-brand" href=""></a>
 		<button
 			class="navbar-toggler"
 			type="button"
@@ -79,6 +79,14 @@
 						</li>
 						<li><hr class="dropdown-divider" /></li>
 					</ul>
+				</li>
+
+				<li class="nav-item">
+					<a
+						class="nav-link"
+						href="{% url 'contacto_empresa' %}"
+						>Venta Empresas</a
+					>
 				</li>
 			</ul>
 
@@ -178,7 +186,7 @@
 		box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
 	}
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 992px) {
 		nav-link {
 			font-size: 16px;
 		}

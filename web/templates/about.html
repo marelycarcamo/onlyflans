@@ -2,10 +2,12 @@
 <h1>Acerca de Nosotros</h1>
 {% endblock %} {% block content %}
 
-<div class="row">
-
-	<section class="col-12 d-flex justify-content-lg-evenly">
-		<div class="col-lg-5 text-celeste px-4"  style="max-width: 400px;">
+<div class="row mb-5">
+	<section
+		class="col-12 d-flex flex-column flex-lg-row justify-content-lg-evenly align-items-center">
+		<div
+			class="col-lg-5 col-12 text-celeste ps-lg-4 ps-2 d-flex flex-column justify-content-center"
+			style="max-width: 400px">
 			<h3>Nuestra Historia</h3>
 			<p>
 				En el corazón de Valdivia, la familia Enoch se convirtió en sinónimo de
@@ -21,20 +23,25 @@
 				descubrir los secretos de los famosos budines chilenos.
 			</p>
 		</div>
-		<div class="cl-12 col-lg-7 d-flex flex-row justify-content-center">
+		<div
+			class="col-12 col-lg-7 pe-2 pe-lg-4 d-flex flex-column flex-lg-row justify-content-lg-center align-items-center">
 			<img
 				src="{% static '/img/local-onlyflans.png' %}"
-				style="max-width: 600px; width: 100%; height: 600px"
+				style="max-width: 600px; width: 100%; height: 600px; object-fit: cover"
 				alt="" />
 		</div>
 	</section>
 
-	<section class="col-12 d-flex flex-row justify-content-evenly">
-		<div class="col-7">
+	<section
+		id="section-mision"
+		class="col-12 d-lg-flex flex-row justify-content-evenly">
+		<div class="col-lg-7 col-12 ps-2 ps-lg-4">
 			<img src="{% static '/img/mision.jpg' %}" alt="" />
 		</div>
 
-		<div class="col-5 text-celeste px-4" style="max-width: 400px">
+		<div
+			class="col-lg-5 col-12 text-celeste pe-2 pe-lg-4 d-flex flex-column justify-content-center"
+			style="max-width: 400px">
 			<h3>Nuestra Misión</h3>
 			<p>
 				La misión de nuestra cafetería, ubicada en el corazón del sur de Chile,
@@ -49,8 +56,10 @@
 		</div>
 	</section>
 
-	<section class="col-12 d-flex flex-row justify-content-evenly">
-		<div class="col-5 text-celeste px-4" style="max-width: 400px">
+	<section class="col-12 d-flex flex-lg-row justify-content-lg-evenly">
+		<div
+			class="col-lg-5 col-12 text-celeste ps-lg-4 ps-2 d-flex flex-column justify-content-center"
+			style="max-width: 400px">
 			<h3>Variedad de Productos</h3>
 			<p>
 				Nuestra selección de flanes, cafés y dulces artesanales es una verdadera
@@ -64,17 +73,20 @@
 				irresistible que deleita a todos los paladares.
 			</p>
 		</div>
-		<div class="col-7">
+		<div class="col-lg-7 col-12 pe-lg-4 pe-2">
 			<img src="{% static '/img/variedades-productos.jpg'%}" alt="" />
 		</div>
 	</section>
 
-	<section class="col-12 d-flex flex-row justify-content-evenly">
-		<div class="col-7">
-			<img src="{% static '/img/nuestro-equipo.jpg' %}" alt="">
+	<section class="col-12 d-flex flex-lg-row justify-content-evenly">
+		<div class="col-lg-7 col-12 ps-2 ps-lg-4">
+			<img src="{% static '/img/nuestro-equipo.jpg' %}" alt="" />
 		</div>
-		<div class="col-5 text-celeste px-4" style="max-width: 400px">
+		<div
+			class="col-5 text-celeste pe-2 pe-lg-4 d-flex flex-column justify-content-center"
+			style="max-width: 400px">
 			<h3>Nuestro equipo</h3>
+			<p>
 				Onlyflans es una cafetería única que ofrece una experiencia culinaria
 				inolvidable con su especialidad en flanes, cafés y dulces artesanales.
 				Cada flan es una obra de arte, elaborado con pasión y los mejores
@@ -87,8 +99,10 @@
 		</div>
 	</section>
 
-	<section class="col-12 d-flex flex-row justify-content-evenly">
-		<div class="col-5 text-celeste px-4" style="max-width: 400px">
+	<section class="col-12 d-flex flex-lg-row justify-content-lg-evenly">
+		<div
+			class="col-lg-5 col-12 text-celeste ps-lg-4 ps-2 d-flex flex-column justify-content-center"
+			style="max-width: 400px">
 			<h3>Compromiso con la Comunidad y el Medio Ambiente</h3>
 			<p>
 				Onlyflans, nuestra cafetería, se destaca por su compromiso con la
@@ -100,8 +114,11 @@
 				nuestro entorno y sus habitantes.
 			</p>
 		</div>
-		<div class="col-7">
-			<img src="{% static '/img/compromiso-comunidad.jpeg' %}" alt="" class="" />
+		<div class="col-lg-7 col-12 pe-lg-4 pe-2">
+			<img
+				src="{% static '/img/compromiso-comunidad.jpeg' %}"
+				alt=""
+				class="" />
 		</div>
 	</section>
 </div>
@@ -115,34 +132,17 @@
 		padding-top: 50px;
 	}
 
-	
-	section {
-		padding-block: 60px;
-		position: relative; /* Needed for absolute positioning of overlay */
-	  }
-	  
-	  .section-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: rgba(2, 152, 202, 0.5); /* Semi-transparent blue */
-		z-index: -1; /* Place behind the content */
-	  }
-	  
-	
-
-	img {
+	section div img {
 		width: 100%;
+		height: auto;
+		object-fit: cover;
 	}
 
-
-
-
 	@media only screen and (max-width: 992px) {
-
-
+		#section-mision,
+		#section-varidad-productos {
+			display: none;
+		}
 	}
 </style>
 
