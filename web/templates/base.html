@@ -20,6 +20,9 @@
 			crossorigin="anonymous" />
 
 		{% load static %}
+
+		
+		<link rel="stylesheet" href="{% static '/css/base.css' %}" />
 		<link
 			rel="icon"
 			href="{% static 'img\icono-of.png' %}"
@@ -31,53 +34,19 @@
 				{% include 'header.html' %} {% include 'navbar.html' %}
 
 				<div id="contenido">
-					{% block h1 %}
-					<h1></h1>
-					{% endblock %} {%block content %}
+					{% block h1 %}<h1 class="text-celeste"></h1>{% endblock %}
+					{% block h3%}<h3 class="text-celeste"></h3>{% endblock %}
+					{% block h5%}<h3 class="text-celeste"></h5>{% endblock %}
+					{%block content %}
 					<!-- contenido personalizado de cada plantilla -->
-					{%block image %}
-					<!-- En caso de agregar una imagen -->
-					{%endblock %} {% endblock%}
+					{%endblock %}
 				</div>
 
 				{% include 'footer.html' %}
 			</div>
 		</div>
 
-		<style>
-			h1 {
-				color: var(--celeste);
-			}
-
-			body {
-				background-color: darkslategray;
-				font-family: Verdana, Geneva, Tahoma, sans-serif;
-				color: rgb(254, 245, 237);
-				scroll-behavior: smooth;
-			}
-
-			#contenido {
-				background-color: rgb(189, 196, 208);
-			}
-			:root {
-				--celeste: rgb(2, 152, 202);
-			}
-
-			.bg-celeste{
-				background: var(--celeste);
-				
-			}
-
-			.text-celeste{
-				color: var(--celeste);
-				
-			}
-
 		
-
-
-
-		</style>
 		<script
 			src="https://code.jquery.com/jquery-3.7.1.js"
 			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="

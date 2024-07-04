@@ -1,31 +1,34 @@
-{% extends 'base.html' %} {% load static %}
-<
-	{% block h1 %}
-	<h1>Venta a Empresas</h1>
+{% extends 'base.html' %} {% load static %} < {% block h1 %}
+<h1>Venta a Empresas</h1>
+{% endblock %} {% block h3 %}
+<h3>
+	Onlyflans te ofrece el regalo perfecto elaborado con los mejores ingredientes
+	y una gran presentación
+</h3>
+<h5>Agrégale valor a tu empresa y eventos con un regalo delicioso.</h5>
 
-	{% endblock %} {% block content %}
-	<link rel="stylesheet" href="{% static '/css/formulario.css' %}" />
+<h5>
+	Regala una gran experiencia y sorprende a tus colaboradores, clientes o
+	invitados.
+</h5>
 
-	<div class="container-form">
-		<form action="{% url 'contacto_empresa' %}" method="POST">
-			{% csrf_token %} {{ form.as_p }}
-			<button type="submit" class="btn btn-info btn-lg text-white">
-				Enviar
-			</button>
-		</form>
-	</div>
+{% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static '/css/formulario.css' %}" />
+
+<div class="container-form">
+	<form action="{% url 'contacto_empresa' %}" method="POST">
+		{% csrf_token %} {{ form.as_p }}
+		<button type="submit" class="btn btn-info btn-lg text-white">Enviar</button>
+	</form>
+</div>
 
 <style>
-	
 	input {
 		width: 420px;
 	}
-
-	p {
-		font-size: 16px;
-		color: var(--celeste);
+	textarea{
+		height: 150px;
 	}
 </style>
 
 {% endblock %}
-

@@ -27,5 +27,7 @@ urlpatterns = [
     path("twitter/", views.twitter_redirect, name="twitter_redirect"),
     path("instagram/", views.instagram_redirect, name="instagram_redirect"),
     path("empresa/", views.contacto_empresa, name="contacto_empresa"),
+
+    
 ]
 

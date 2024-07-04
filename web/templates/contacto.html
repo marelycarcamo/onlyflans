@@ -1,7 +1,10 @@
 {% extends 'base.html' %}{% load static %} {% block h1 %}
 <div>
 <h1>Suscríbete</h1>
-<p>Suscríbete a nuestras noticias y novedades. Te esperamos !</p>
+{% endblock %}
+
+{% block h3 %}
+<h3>Suscríbete a nuestras noticias y novedades. Te esperamos !</h3>
 
 {% endblock %} {% block content %}
 <link rel="stylesheet" href="{% static '/css/formulario.css' %}" />
@@ -14,16 +17,16 @@
 		<button type="submit" class="btn btn-info btn-lg text-white">Enviar</button>
 	</form>
 </div>
-<style>
-    input{
-        width: 420px;
-    }
-p{
-	font-size: 16px;
-	color: var(--celeste);
-	
-}
-</style>
+
 <link rel="stylesheet" href="{% static '/js/formulario.js' %}" />
 </div>
+
+<style>
+	input {
+		width: 420px;
+	}
+	textarea{
+		height: 150px;
+	}
+</style>
 {% endblock %}

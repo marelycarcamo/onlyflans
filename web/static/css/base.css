@@ -1,0 +1,23 @@
+			body {
+				background-color: darkslategray;
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				color: rgb(254, 245, 237);
+				scroll-behavior: smooth;
+			}
+
+			#contenido {
+				background-color: rgb(189, 196, 208);
+			}
+			:root {
+				--celeste: rgb(2, 152, 202);
+			}
+
+			.bg-celeste{
+				background: var(--celeste);
+				
+			}
+
+			.text-celeste, h1, h3, h5{
+				color: var(--celeste);
+				
+			}

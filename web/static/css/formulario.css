@@ -23,6 +23,7 @@ transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave */
 }
 
 
+
 input:focus, textarea:focus {
 border:none;
 box-shadow: 0 0 10px rgba(2, 152, 202, 0.7); /* Añade un resplandor */

@@ -18,7 +18,6 @@ from .models import Dulce
 admin.site.register(Dulce)
 
 from .models import ContactoEmpresa
-
 admin.site.register(ContactoEmpresa)
 
 
