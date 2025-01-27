@@ -1,17 +1,5 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
-
-# def index(request):
-#   return render(request, 'index.html')
-
-# def about(request):
-#   return render(request, 'about.html')
-
-# def welcome(request):
-#   return render(request, 'welcome.html')
-
-
-
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 
@@ -52,8 +40,8 @@ def about(request):
     return render(request, 'about.html')
 
 
-def base(request):
-    return render(request, 'base.html')
+# def base(request):
+#     return render(request, 'base.html')
 
 def contacto(request):
     if request.method == 'POST':

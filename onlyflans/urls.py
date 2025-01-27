@@ -7,7 +7,7 @@ from web import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("accounts/", include("django.contrib.auth.urls")),
+    
     path("", views.index, name="index"),
     path("acerca/", views.about, name="about"),
     path("bienvenido/", views.welcome, name="welcome"),
@@ -16,8 +16,9 @@ urlpatterns = [
 
   
 
-    
+    path("accounts/", include("django.contrib.auth.urls")),
     path("accounts/login/", views.login, name="login"),
+    
     path("accounts/logout/", views.logout, name="logout"),
     path("cafeteria/", views.coffee, name="coffee"),
     path("delicias/", views.delicias, name="delicias"),
