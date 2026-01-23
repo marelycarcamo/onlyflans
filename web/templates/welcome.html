@@ -5,8 +5,8 @@
 
 <!-- <img id='user' src="{% static '/img/user.svg' %}" alt=""><br> -->
 {% if user.is_authenticated %}
-<h1>Hola {{ user.get_username | title }} !</h1>
-<h3>Tenemos una lista de productos exclusivos para ti.
+<h1 class="ps-5 pt-2" style="font-weight: 600;">Hola {{ user.get_username | title }} !</h1>
+<h3 class="ps-5 pt-2" style="font-weight: 600;"> Tenemos una lista de productos exclusivos para ti.
 Contáctanos.</h3>
 
 {% endif %}

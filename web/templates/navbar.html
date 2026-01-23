@@ -93,23 +93,19 @@
 			</ul>
 
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-				<li class="nav-item nav-fa-brands">
+				<li class="nav-item nav-fa-brands d-flex flex-row">
 					<a
 						class="nav-link"
 						href="{% url 'facebook_redirect' %}"
 						target="_blank"
 						><i class="fa-brands fa-facebook"></i
 					></a>
-				</li>
-				<li class="nav-item nav-fa-brands">
 					<a
 						class="nav-link"
 						href="{% url 'twitter_redirect' %}"
 						target="_blank"
 						><i class="fa-brands fa-twitter"></i
 					></a>
-				</li>
-				<li class="nav-item nav-fa-brands">
 					<a
 						class="nav-link"
 						href="{% url 'instagram_redirect' %}"
@@ -119,7 +115,9 @@
 				</li>
 				<li>
 					{% if not user.is_authenticated %}<a href="{% url 'login' %}">
-						<button type="button" class="btn btn-auth text-white">Login</button>
+						<!-- <button type="button" class="btn btn-auth text-white">Login</button> -->
+						<button type="button" class="btn btn-outline-light">Login</button> 
+						<!-- <button type="button" class="btn btn-light">Login</button> -->
 					</a>
 					{% endif %}
 				</li>
@@ -127,9 +125,8 @@
 					{% if user.is_authenticated %}
 					<form method="POST" action="{% url 'logout' %}">
 						{% csrf_token %}
-						<button type="submit" class="btn btn-auth text-bg-light">
-							Logout
-						</button>
+						<button type="submit" class="btn btn-outline-danger">Cerrar sesión</button>
+				
 					</form>
 					{% endif %}
 				</li>
@@ -141,12 +138,14 @@
 <style>
 	/* color de fondo del navbar */
 	.container-navbar {
-		background-color: darkslategray;
+		background-color: var(--celeste) !important;
 	}
 
 	/* define color de texto del navbar */
 	a {
 		color: white !important;
+		font-size: 1.1rem !important;
+		font-weight: 400 !important;
 	}
 
 	/* distancia entre los elementos del navbar */
@@ -156,8 +155,7 @@
 
 	/* Hover del menú principal */
 	.navbar-nav .nav-link:hover {
-		color: white;
-		background-color: var(--celeste);
+		font-weight: 700 !important;
 	}
 
 	/* Estilos para los submenús desplegables */
@@ -188,9 +186,10 @@
 		box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
 	}
 
+	
 	@media only screen and (max-width: 992px) {
 		nav-link {
-			font-size: 16px;
+			font-size: 1rem;
 		}
 
 		/*Oculta las redes sociales*/

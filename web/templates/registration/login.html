@@ -9,7 +9,7 @@
 				class="text-center border border-primary-subtle p-4 rounded">
 				{% csrf_token %}
 				<div class="mb-3">
-					<label for="exampleFormControlInput1" class="form-label"
+					<label for="exampleFormControlInput1" class="form-label text-celeste" style="font-weight: 600;"
 						>Nombre Usuario</label
 					>
 					<input
@@ -20,7 +20,7 @@
 						required />
 				</div>
 				<div class="mb-3">
-					<label for="exampleFormControlInput1" class="form-label"
+					<label for="exampleFormControlInput1" class="form-label text-celeste" style="font-weight: 600;"
 						>Clave Usuario</label
 					>
 					<input
@@ -33,11 +33,17 @@
 
 				<div>
 					<button type="submit" class="btn col-12 bg-celeste text-white" >
-						Iniciar Sesion
+						Iniciar Sesión
 					</button>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
-> {% endblock %}
+<style>
+	button:over{
+		background: white !important;
+		color: var(--celeste) !important;
+	}
+</style>
+ {% endblock %}
