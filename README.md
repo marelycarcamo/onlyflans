@@ -5,8 +5,8 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-5.3.3-purple)
 ![Font Awesome](https://img.shields.io/badge/font--awesome-6.5.1-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
+ ![alt text](web/stati/img/inicio.png)
 
-![alt text](web\static\img\admin.png)
 
 
 ## 📌 Descripción
@@ -20,7 +20,8 @@ Su propósito es servir como proyecto educativo y práctico en el ámbito de la 
 - **Perfil administrador**  
   - Acceso al **Django Admin** para gestionar productos, usuarios y formularios de contacto.  
   - CRUD completo de productos (crear, editar, eliminar).  
-  ![alt text](web\static\img\inicio.png)
+ 
+  ![alt text](web/stati/img/admin.png)
 
 - **Gestión de usuarios logueados**  
   - Sistema de login y registro.  
@@ -58,14 +59,16 @@ Su propósito es servir como proyecto educativo y práctico en el ámbito de la 
 
 ## 📂 Estructura del proyecto
 onlyflans/
-│── manage.py          # Script principal de Django 
+│── manage.py          # Script principal de Django
 │── db.sqlite3         # Base de datos
-│── web/               # Aplicación principal 
-│   ├── models.py      # Definición de modelos (Flan, Cafe, Dulce, ContactForm, ContactoEmpresa) │   ├── views.py       # Vistas y lógica de negocio
+│── web/               # Aplicación principal
+│   ├── models.py      # Definición de modelos (Flan, Cafe, Dulce, ContactForm, ContactoEmpresa) 
+│   ├── views.py       # Vistas y lógica de negocio
 │   ├── forms.py       # Formularios de contacto
-│   ├── templates/     # Plantillas HTML (header, navbar, footer, etc.) 
-│   ├── static/        # Archivos CSS, JS, imágenes 
+│   ├── templates/     # Plantillas HTML (header, navbar, footer, etc.)
+├── static/        # Archivos CSS, JS, imágenes
 │── requirements.txt   # Dependencias del proyecto
+
 
 
 ---
