@@ -58,6 +58,8 @@ Su propósito es servir como proyecto educativo y práctico en el ámbito de la 
 ---
 
 ## 📂 Estructura del proyecto
+
+```textplane
 onlyflans/
 │── manage.py          # Script principal de Django
 │── db.sqlite3         # Base de datos
@@ -68,9 +70,7 @@ onlyflans/
 │   ├── templates/     # Plantillas HTML (header, navbar, footer, etc.)
 ├── static/        # Archivos CSS, JS, imágenes
 │── requirements.txt   # Dependencias del proyecto
-
-
-
+```
 ---
 
 ## 🗄️ Modelos de datos (Django ORM)
