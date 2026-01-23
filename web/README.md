@@ -6,7 +6,7 @@
 ![Font Awesome](https://img.shields.io/badge/font--awesome-6.5.1-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 
-![alt text](image.png)
+![alt text](web\static\img\admin.png)
 
 
 ## 📌 Descripción
@@ -20,7 +20,7 @@ Su propósito es servir como proyecto educativo y práctico en el ámbito de la 
 - **Perfil administrador**  
   - Acceso al **Django Admin** para gestionar productos, usuarios y formularios de contacto.  
   - CRUD completo de productos (crear, editar, eliminar).  
-  ![alt text](image-1.png)
+  ![alt text](web\static\img\inicio.png)
 
 - **Gestión de usuarios logueados**  
   - Sistema de login y registro.  
