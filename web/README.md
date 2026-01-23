@@ -6,6 +6,9 @@
 ![Font Awesome](https://img.shields.io/badge/font--awesome-6.5.1-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 
+![alt text](image.png)
+
+
 ## 📌 Descripción
 **OnlyFlans** es una aplicación web desarrollada en **Django** que simula una plataforma de venta y gestión de postres.  
 El proyecto integra autenticación de usuarios, administración de productos y un frontend estilizado con **Bootstrap**, **Font Awesome** y **Google Fonts**.  
@@ -17,6 +20,7 @@ Su propósito es servir como proyecto educativo y práctico en el ámbito de la 
 - **Perfil administrador**  
   - Acceso al **Django Admin** para gestionar productos, usuarios y formularios de contacto.  
   - CRUD completo de productos (crear, editar, eliminar).  
+  ![alt text](image-1.png)
 
 - **Gestión de usuarios logueados**  
   - Sistema de login y registro.  
