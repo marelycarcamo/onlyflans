@@ -68,7 +68,7 @@ onlyflans/
 │   ├── views.py       # Vistas y lógica de negocio
 │   ├── forms.py       # Formularios de contacto
 │   ├── templates/     # Plantillas HTML (header, navbar, footer, etc.)
-├── static/        # Archivos CSS, JS, imágenes
+├── static/            # Archivos CSS, JS, imágenes
 │── requirements.txt   # Dependencias del proyecto
 ```
 ---
@@ -167,9 +167,11 @@ onlyflans/
 
 ## 🧪 Testing
 Ejecutar pruebas con:
-	```bash
-	python manage.py test
+
 	```
+	python manage.py test
+	
+
 ---
 
 ## 📌 Roadmap / Futuras mejoras
