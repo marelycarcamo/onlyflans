@@ -1,7 +1,7 @@
 # OnlyFlans 🍮
 
-![Python](https://img.shields.io/badge/python-3.10-blue)
-![Django](https://img.shields.io/badge/django-4.2-green)
+![Python](https://img.shields.io/badge/python-3.12-blue)
+![Django](https://img.shields.io/badge/django-6.0.2-green)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-5.3.3-purple)
 ![Font Awesome](https://img.shields.io/badge/font--awesome-6.5.1-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
@@ -47,8 +47,8 @@ Su propósito es servir como proyecto educativo y práctico en el ámbito de la 
 ## 🛠️ Tecnologías utilizadas
 | Tecnología | Versión | Uso |
 |------------|---------|-----|
-| **Python** | 3.10+ | Backend con Django |
-| **Django** | 4.2 | Framework principal |
+| **Python** | 3.12 | Backend con Django |
+| **Django** | 6.0.2 | Framework principal |
 | **SQLite3** | nativo | Base de datos |
 | **Bootstrap** | 5.3.3 | Estilos y diseño responsivo |
 | **Font Awesome** | 6.5.1 | Iconografía |
